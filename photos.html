@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photos - My Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-code me-2"></i>MyPortfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="photos.html">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <button onclick="toggleMode()" class="btn btn-sm btn-outline-light ms-3" title="Toggle Dark Mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Photos Section -->
+    <section id="photos" class="py-5" style="margin-top: 80px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">My Photos</h2>
+                    <p class="text-muted">A collection of my favorite moments</p>
+                </div>
+            </div>
+            <div class="row g-4" id="photoGallery">
+                <!-- Photo items will be added here -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="photo-card">
+                        <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/561610277_2305971016499350_3045396752590133284_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEkMHaCJmW82NqFbzQwRCsryMCp0QkUkqzIwKnRCRSSrEMbxDTkhd3mKSplQLZy710-RbLOhgEYLwpIAANp-znI&_nc_ohc=xwbcKbBSXYAQ7kNvwHYF-aq&_nc_oc=Adldu2a6-em4JTAXyFSj_HVIvDlDvbw0EcLFD4g0i1XmxJCwvIGWOoK4w6Pd9wQr5z4&_nc_zt=23&_nc_ht=scontent.fceb2-2.fna&_nc_gid=sZItIsEG3MJFcb7E1KSk9Q&oh=00_AfnICvRfJb9HFh0WoWGa5HWZ_PGkBV8gLJWOVn1sx659JQ&oe=6939A840" 
+                        alt="Photo 1" class="img-fluid rounded photo-image">
+                        <div class="photo-overlay">
+                            <h5 class="text-white">Acquintance Party</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="photo-card">
+                        <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t39.30808-6/473300042_2080247075738413_7477234412996374286_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHhasdm8cB2f9Xrp_jCYln94TIFb6zMRmfhMgVvrMxGZ6f3zG3qm0km3HpVUggfsXdwBh8uCK39yBvKJTTKV0sU&_nc_ohc=2-FVrrL7lZEQ7kNvwGVlnx-&_nc_oc=AdkIhWWvUtqhvqABIz1qajDs-NxKSAoRR6mC3Id-dxTxMBe33oiTSdwrk2cjKyS4SEI&_nc_zt=23&_nc_ht=scontent.fceb6-1.fna&_nc_gid=pGZiD9cDXsa7kjtuVKcsNQ&oh=00_AfmyAVxWpXFEjWe9_hiXpXWYpUtfeLdYIWpbkzPDkwGFDg&oe=693971C1" 
+                        alt="Photo 2" class="img-fluid rounded photo-image">
+                        <div class="photo-overlay">
+                            <h5 class="text-white">My Uncle's Wedding</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="photo-card">
+                        <img src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/489696569_2149558482140605_5940466498618656697_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHgaDIelZTLcaEq1pD2sMUefncxt0vvmBN-dzG3S--YE_58B9pZIrsZIlvDQvXOLlbdoPpKCl0kCyR6X1d40urj&_nc_ohc=WyVIMjZu3xsQ7kNvwHCgcny&_nc_oc=AdnFx0bMaIf0IDaAbLFxHAF5J47iTDMMDn7CkiHGlGudGJMX1-0AfSHcpu8_3uYApFA&_nc_zt=23&_nc_ht=scontent.fceb6-4.fna&_nc_gid=zGibVC12KTTyXA2jbsW_nA&oh=00_AfnxTlRfozOBp68gwX-eXE6_Q58THHLXsmKYcfEZtupCYg&oe=6939946E" 
+                        alt="Photo 3" class="img-fluid rounded photo-image">
+                        <div class="photo-overlay">
+                            <h5 class="text-white">Just Me Vibin'</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="photo-card">
+                        <img src="assets/image/jplPNG.PNG" 
+                        alt="Photo 4" class="img-fluid rounded photo-image">
+                        <div class="photo-overlay">
+                            <h5 class="text-white">Pandemic Era</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="photo-card">
+                        <img src="https://images.preview.ph/preview/images/2024/09/23/457039509-1753874672021571-3377485726430209821-n-1-1727083774.jpg" 
+                        alt="Photo 5" class="img-fluid rounded photo-image">
+                        <div class="photo-overlay">
+                            <h5 class="text-white">Random</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="photo-card">
+                        <img src="https://i.pinimg.com/736x/87/99/da/8799dacead62821095800fc3619744d3.jpg" 
+                        alt="Photo 6" class="img-fluid rounded photo-image">
+                        <div class="photo-overlay">
+                            <h5 class="text-white">My Mirror Shot</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 My Portfolio. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-light me-3"><i class="fab fa-github fa-lg"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-light"><i class="fas fa-envelope fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-flex align-items-center justify-content-center" style="display: none; width: 50px; height: 50px; z-index: 1000;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
+
